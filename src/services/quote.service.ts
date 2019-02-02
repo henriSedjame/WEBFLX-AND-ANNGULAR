@@ -38,20 +38,15 @@ export class QuoteService {
          * à la réception de chaque message
          * On crée un quote
          */
-        let quote = new Quote();
-
-        /**
-         * On assigne la donnée envoyée à notre quote
-         */
-        let json = JSON.parse(event.data);
-        Object.assign(quote, json);
+        let quote = Quote.of(event.data);
 
         /**
          * On alimente notre tableau de quotes
          */
         this.quotes.push(quote);
+
         /**
-         * on palle la méthode run sur notre ngZone
+         * on appelle la méthode run sur notre ngZone
          * l'observer souscrit à notre tableau
          *
          */
