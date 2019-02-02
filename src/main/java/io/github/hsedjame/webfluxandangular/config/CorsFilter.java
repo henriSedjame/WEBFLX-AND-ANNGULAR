@@ -1,4 +1,4 @@
-package io.github.hsedjame.webfluxandangular;
+package io.github.hsedjame.webfluxandangular.config;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
